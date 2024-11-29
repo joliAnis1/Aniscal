@@ -5,7 +5,7 @@ st.title("🌟 Welcome to Jolina M. Aniscal's Blog 🌟")
 st.markdown("---")
 
 st.subheader("📸 My Profile")
-st.image("jolina.jpg", caption="Jolina M. Aniscal", width=200)  
+st.image("jolina.jpg", caption="Jolina M. Aniscal", width=500,)  
 
 st.markdown("""
 <style>
