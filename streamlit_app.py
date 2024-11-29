@@ -1,7 +1,7 @@
 import streamlit as st
 from datetime import datetime
 
-st.title("🌟 Welcome to Jolina M. Aniscal's Blog 🌟")
+st.title("🌟 Welcome to My Blog 🌟")
 st.markdown("---")
 
 st.subheader("📸 My Profile")
