@@ -8,7 +8,7 @@ st.markdown("---")
 # Profile Section
 st.subheader("📸 My Profile")
 # Display profile image
-st.image("profile_pic.jpg", caption="Jolina M. Aniscal", width=200)  # Update to your image file path
+st.image("jolina.jpg", caption="Jolina M. Aniscal", width=200)  # Update to your image file path
 
 # Display personal information in a card-like layout
 st.markdown("""
