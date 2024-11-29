@@ -97,7 +97,3 @@ if choice == "🏆 Achievements":
     else:
         st.write("No educational attainment added yet.")
 
-# Footer
-st.markdown("---")
-st.markdown("💻 Built with Streamlit | Designed with ❤️ for simplicity and style")
-
