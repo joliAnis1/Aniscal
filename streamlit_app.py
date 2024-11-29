@@ -1,16 +1,12 @@
 import streamlit as st
 from datetime import datetime
 
-# Title and Header
 st.title("🌟 Welcome to Jolina M. Aniscal's Blog 🌟")
 st.markdown("---")
 
-# Profile Section
 st.subheader("📸 My Profile")
-# Display profile image
-st.image("jolina.jpg", caption="Jolina M. Aniscal", width=200)  # Update to your image file path
+st.image("jolina.jpg", caption="Jolina M. Aniscal", width=200)  
 
-# Display personal information in a card-like layout
 st.markdown("""
 <style>
 .profile-card {
@@ -28,7 +24,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# About Me Section
 st.subheader("📖 About Me")
 about_me = """
 Hi, I am a student who loves studying, watching movies, playing sports (especially table tennis), 
@@ -40,16 +35,13 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
-# Navigation
 st.markdown("---")
 sections = ["🏆 Achievements"]
 choice = st.radio("Navigate to:", sections)
 
-# Achievements Section
 if choice == "🏆 Achievements":
     st.subheader("📜 Certificates and Achievements")
 
-    # Add Certificates
     with st.expander("Add Certificates"):
         new_certificate = st.text_input("Certificate Name")
         if st.button("Add Certificate"):
@@ -61,7 +53,6 @@ if choice == "🏆 Achievements":
             else:
                 st.error("Please enter a certificate name.")
 
-    # Display Certificates
     st.markdown("### 🎖️ Certificates")
     if 'certificates' in st.session_state and st.session_state['certificates']:
         for i, cert in enumerate(st.session_state['certificates']):
@@ -73,7 +64,6 @@ if choice == "🏆 Achievements":
     else:
         st.write("No certificates added yet.")
 
-    # Add Educational Attainment
     with st.expander("Add Educational Attainment"):
         new_education = st.text_input("Educational Attainment")
         if st.button("Add Educational Attainment"):
@@ -85,7 +75,6 @@ if choice == "🏆 Achievements":
             else:
                 st.error("Please enter educational attainment.")
 
-    # Display Educational Attainment
     st.markdown("### 🎓 Educational Attainment")
     if 'education' in st.session_state and st.session_state['education']:
         for i, edu in enumerate(st.session_state['education']):
