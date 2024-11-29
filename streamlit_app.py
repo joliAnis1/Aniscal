@@ -8,7 +8,7 @@ st.markdown("---")
 # Profile Section
 st.subheader("📸 My Profile")
 # Display profile image
-st.image("jolina.jpg", caption="Jolina M. Aniscal", width=200)  # Update to your image file path
+st.image("profile_pic.jpg", caption="Jolina M. Aniscal", width=200)  # Update to your image file path
 
 # Display personal information in a card-like layout
 st.markdown("""
@@ -42,42 +42,8 @@ st.markdown(f"""
 
 # Navigation
 st.markdown("---")
-sections = ["✍️ Blog Posts", "🏆 Achievements"]
+sections = ["🏆 Achievements"]
 choice = st.radio("Navigate to:", sections)
-
-# Blog Post Section
-if choice == "✍️ Blog Posts":
-    st.subheader("📝 Create and View Blog Posts")
-    
-    # Blog Post Creation
-    with st.expander("Create a New Blog Post"):
-        title = st.text_input("Post Title")
-        content = st.text_area("Post Content")
-        submit_post = st.button("Publish Post")
-        
-        if submit_post:
-            if 'blog_posts' not in st.session_state:
-                st.session_state['blog_posts'] = []
-            if title and content:
-                st.session_state['blog_posts'].append({
-                    "title": title,
-                    "content": content,
-                    "date": datetime.now().strftime("%B %d, %Y"),
-                })
-                st.success("Post published!")
-            else:
-                st.error("Please fill out both the title and content fields.")
-    
-    # Display Existing Posts
-    st.markdown("### 📰 All Blog Posts")
-    if 'blog_posts' in st.session_state and st.session_state['blog_posts']:
-        for post in reversed(st.session_state['blog_posts']):
-            st.markdown(f"#### {post['title']}")
-            st.markdown(f"*Published on {post['date']}*")
-            st.write(post['content'])
-            st.markdown("---")
-    else:
-        st.write("No posts yet. Create your first post!")
 
 # Achievements Section
 if choice == "🏆 Achievements":
@@ -134,3 +100,4 @@ if choice == "🏆 Achievements":
 # Footer
 st.markdown("---")
 st.markdown("💻 Built with Streamlit | Designed with ❤️ for simplicity and style")
+
